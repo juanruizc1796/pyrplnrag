@@ -14,4 +14,4 @@ torch
 pydantic>=2.0.0
 transformers
 groq
-langchain-groq
+langchain-gro

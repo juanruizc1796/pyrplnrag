@@ -16,9 +16,9 @@ INDEX_PATH = MODELS_DIR / "faiss_index_total.bin"
 def load_articles():
     df = pd.read_csv(ARTICLES_PATH)
 
-    df = df.dropna(subset=["texto_articulo"])
-    df = df[df["texto_articulo"].str.strip() != ""]
-    df["texto_articulo"] = df["texto_articulo"].astype(str)
+    df = df.dropna(subset=["texto"])
+    df = df[df["texto"].str.strip() != ""]
+    df["texto"] = df["texto"].astype(str)
 
     print(f"Artículos cargados: {len(df)}")
     return df
@@ -28,7 +28,7 @@ def build_embeddings(df):
     print("Cargando modelo de embeddings (MiniLM-L12)...\n")
     model = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
 
-    textos = df["texto_articulo"].tolist()
+    textos = df["texto"].tolist()
 
     textos = [str(t) for t in textos]
 

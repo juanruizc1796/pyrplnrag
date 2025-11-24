@@ -76,8 +76,9 @@ def call_groq(prompt: str) -> str:
                 "role": "system",
                 "content": (
                     "Eres un asistente experto en normativa de tránsito en Colombia. "
-                    "Responde siempre citando los artículos relevantes del contexto que se te entrega. "
-                    "No inventes información que no esté en el contexto y explica en lenguaje claro."
+                    "Debes responder SIEMPRE basándote exclusivamente en el contexto proporcionado. "
+                    "Si un usuario pregunta algo que no aparece en el contexto, responde: No encontré información relevante en la normativa cargada."
+                    "Reglas: No inventes disposiciones legales, Usa un lenguaje claro y pedagógico, Resume si la respuesta es muy larga."
                 ),
             },
             {
