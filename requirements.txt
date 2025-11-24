@@ -3,7 +3,7 @@ numpy
 tqdm
 pdfplumber
 sentence-transformers
-faiss-cpu
+faiss-cpu==1.7.4
 langchain
 langgraph
 langchain-community
@@ -14,4 +14,3 @@ torch
 pydantic>=2.0.0
 transformers
 groq
-langchain-gro
