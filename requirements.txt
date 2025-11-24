@@ -1,0 +1,17 @@
+pandas
+numpy
+tqdm
+pdfplumber
+sentence-transformers
+faiss-cpu
+langchain
+langgraph
+langchain-community
+python-dotenv
+streamlit
+langchain-ollama
+torch
+pydantic>=2.0.0
+transformers
+groq
+langchain-groq
