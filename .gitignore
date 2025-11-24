@@ -1,11 +1,4 @@
-# Entorno virtual
 .venv/
-
-# Archivos de sistema
-.DS_Store
-
-# Secretos de Streamlit (NO subir nunca)
 .streamlit/secrets.toml
-
-# Datos crudos (PDF grandes)
 data/raw/
+*.env
