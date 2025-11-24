@@ -101,7 +101,7 @@ def rag_responder(query: str, top_k: int = 3):
 
     contexto = ""
     for _, row in articulos.iterrows():
-        contexto += f"ARTÍCULO {row['id_articulo']} - {row['titulo']}\n{row['texto_articulo']}\n\n"
+        contexto += f"ARTÍCULO {row['id_articulo']} - {row['titulo']}\n{row['texto']}\n\n"
 
     prompt = f"""
 PREGUNTA:
@@ -121,9 +121,8 @@ Instrucciones:
     return respuesta, articulos
 
 
-# ============================
+
 # 3. INTERFAZ STREAMLIT
-# ============================
 
 st.set_page_config(page_title="Asistente Legal de Tránsito", page_icon="🚦")
 
